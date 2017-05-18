@@ -1,0 +1,51 @@
+<md-content layout-padding ng-cloak class="addNew">
+<div class="intro">
+<i class="fa fa-address-book logo ng-scope" aria-hidden="true"></i>
+</div>
+<div class="col-md-9 add-user-area" ng-controller="newUser as ctrl" >
+<form  name="newUserForm" method="post" enctype="multipart/form-data">
+<div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>First name</label>
+            <input id="first_name" name="name" ng-model="postdata.first_name">
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Last Name</label>
+             <input id="last_name" name="last_name" ng-model="postdata.last_name">
+          </md-input-container>
+        </div>
+
+<div class="middle-row" layout="row" layout-wrap>
+ <div flex="45" ng-controller ="BasicDemoCtrl as childctrl">
+<md-chips  md-on-select="childctrl.take($chip)" ng-model="childctrl.editableFruitNames" readonly="childctrl.readonly" md-removable="childctrl.removable"
+              md-enable-chip-edit="true"></md-chips></div>
+
+  <div flex="30">
+<md-datepicker id="date" name="date" md-placeholder="date" ng-model="postdata.date"></md-datepicker>
+</div>
+
+   <div flex="25">
+ <input class="ng-hide" id="input-file-id" multiple type="file" name="cv_file_name" placeholder="file" fileread="postdata.cv_file_name" ng-model="postdata.cv_file_name"/>
+<label for="input-file-id" class="md-button md-raised md-primary">Choose File</label>
+</div>             
+
+</div>
+
+<div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Aurhor</label>
+            <input id="author" name="author" ng-model="postdata.author">
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Note</label>
+             <input id="note" name="note" ng-model="postdata.note">
+          </md-input-container>
+        </div>
+ 
+
+<md-button ng-click="ctrl.saveRecipe(postdata); showDialog($event)" class="md-raised md-primary">Submit</md-button>
+</form>
+</div>
+    <md-content>

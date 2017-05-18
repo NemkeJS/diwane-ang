@@ -1,0 +1,85 @@
+<div class="col-md-9" ng-controller="mainCtrl as ctrl">	
+
+<form class="form-inline">
+        <div class="form-group">
+           <md-input-container class="md-block" flex-gt-sm>
+            <label><i class="fa fa-search" aria-hidden="true"></i>
+              Search</label>
+            <input id="first_name" name="name" ng-model="search">
+          </md-input-container>
+        </div>
+      
+
+ <md-input-container>
+          <label>No Rows</label>
+          <md-select ng-model="number" ng-init="number='5'">
+            <md-option ng-repeat="state in states" ng-value="state.abbrev" >
+              {{state.abbrev}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+
+    </form>
+<div class="create-overflow">
+<table class="table table-striped table-hover">
+<tr>
+<th ng-click="sort('first_name')">First Name</th>
+<th ng-click="sort('last_name')">Last Name</th>
+<th>Skills</th>
+<th>Cv Name</th>
+<th>Cv Link</th>
+<th ng-click="sort('date')">Date</th>
+<th>Note</th>
+<th>Edit</th>
+<th>Save</th>
+<th>Delete</th>	
+<th>
+</tr>
+<tbody>
+<tr dir-paginate="user in users|orderBy:sortKey:reverse|filter:search|itemsPerPage:number">
+<td>
+     <span ng-if="!editMode">{{user.first_name }}</span>
+     <span ng-if="editMode">
+     <md-input-container>
+        <label>First name</label>	
+        <input ng-model="user.first_name">
+    </md-input-container>
+     <span>
+</td>
+
+<td><span ng-if="!editMode">{{user.last_name}}</span>
+<span ng-if="editMode">
+	<md-input-container>
+	    <label>Last name</label>
+        <input ng-model="user.last_name">
+        </md-input-container>
+     <span>
+</td>	
+<td>{{user.skill}} {{user.skill2}} {{user.skill3}} {{user.skil4}}</td>
+<td>{{user.cv_file_name}}</td>
+<td><a target="_blank" href="login/{{user.cv_url}}"><i class="fa fa-file" aria-hidden="true"></i>
+</a></td>
+<td>{{user.date}}</td>
+<td ng-click="boole=true"><i class="fa fa-comments-o" aria-hidden="true"></i></td>
+<td  ng-click=" magic(); editMode = true"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
+<td ng-click="ctrl.updateUser(user); editMode = false"><i class="fa fa-bookmark" aria-hidden="true"></i></td>
+
+<td><i ng-click="del(this)" id="{{user.id}}"class="fa fa-times-circle" aria-hidden="true"></i></td>
+<td class="dialog" ng-show="boole"><div>
+<i ng-click="boole=false" class="fa fa-times-circle" aria-hidden="true"></i>
+<h1>Note</h1>	
+<p> Author: {{user.author}}</p>
+<p> Note: {{user.note}}</p>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="cover">
+<dir-pagination-controls
+       max-size="5"
+       direction-links="true"
+       boundary-links="true" >
+    </dir-pagination-controls>
+  </div> 
+</div>
+</div>

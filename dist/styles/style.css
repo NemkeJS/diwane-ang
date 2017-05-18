@@ -1,0 +1,280 @@
+                                
+body {
+	background: #fafafa;
+}
+.addNew {
+	margin-top: 5%;
+}
+
+.sidebar {
+background: #3f51b5;
+height: 100vh;
+text-align: center;
+padding: 0px;
+  }
+ .sidebar ul {
+    padding: 0px;
+    padding-top: 10%;
+} 
+.sidebar ul a:hover {
+	text-decoration: none;
+}
+.sidebar li {
+    height: 8vh;
+    line-height: 8vh;
+    text-align: left;
+    padding-left: 70px;
+    background: #de3641;
+    color: white;
+    text-transform: uppercase;
+-webkit-box-shadow: 2px 2px 4px #212020;
+
+    box-shadow: 2px 2px 4px #212020;
+    margin-bottom: 20px;
+}
+
+
+ .sidebar .logo {
+    font-size: 100px;
+    padding-top: 20%;
+    padding-bottom: 10%;
+    color: #de3641;
+    text-align: center;
+} 
+
+ .add-user-area {
+float: none !important;
+margin-left: auto;
+margin-right: auto;
+ } 
+
+ 
+
+ .sidebar:before {
+    content: " ";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #de3641;
+    top: 0%;
+    -webkit-transform: skewY(45deg);
+    -ms-transform: skewY(45deg);
+    transform: skewY(45deg);
+    -webkit-box-shadow: 2px 2px 4px;
+    box-shadow: 2px 2px 4px;
+    left: 0px;
+}
+
+.sidebar:after {
+    content: " ";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #de3641;
+    top: 0%;
+    -webkit-transform: skewY(45deg);
+    -ms-transform: skewY(45deg);
+    transform: skewY(45deg);
+   -webkit-box-shadow: 2px 2px 4px;
+    box-shadow: 2px 2px 4px;    
+    left: 10px;
+}
+
+.sidebar h1  {
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.sidebar h1:nth-child(4)  {
+margin-top: 100px;
+}
+
+
+.count-users {
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #de3641;
+    border-radius: 100%;
+-webkit-box-shadow: 4px 4px 14px;
+box-shadow: 4px 4px 14px;
+}
+
+.count-users h2 {
+    line-height: 100px;
+    color: #ffffff;
+    font-size: 40px;
+    }
+
+    md-input-container .md-input {
+    border-color: rgb(222, 54, 65);
+    width: 85% !important;
+}
+
+.middle-row {
+margin-top: 5%;
+margin-bottom: 5%;	
+}
+
+md-chips md-chip {
+    background: rgb(63, 81, 181);
+    color: white;
+}
+
+.md-chips md-chip .md-chip-remove md-icon {
+	color: white;
+}
+
+.md-button.md-icon-button md-icon {
+color: #3f51b5;
+}
+
+.dialog {
+    position: absolute;
+    right: 150px;
+    min-height: 200px;
+    min-width: 200px;
+    background: #3f51b5;
+    color: white;
+    padding-left: 35px !important;
+    padding-top: 30px !important;
+    -webkit-box-shadow: 4px 4px 14px black;
+    box-shadow: 4px 4px 14px black;
+    z-index: 999;
+}
+
+.dialog i:first-child {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: #de3641;
+    font-size: 30px;
+}
+
+.dialog:before {
+    content: " ";
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    background: #de3641;
+    top: 0%;
+   -webkit-transform: skewY(20deg);
+    -ms-transform: skewY(20deg);
+    transform: skewY(20deg);
+   -webkit-box-shadow: 2px 2px 4px black;
+    box-shadow: 2px 2px 4px black;
+    left: 0px;
+}
+
+.dialog:after {
+    content: " ";
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    background: #de3641;
+    top: 0%;
+    -webkit-transform: skewY(20deg);
+    -ms-transform: skewY(20deg);
+    transform: skewY(20deg);
+    -webkit-box-shadow: 2px 2px 4px black;
+    box-shadow: 2px 2px 4px black;
+    left: 10px;
+}
+
+
+
+.form-inline {
+	text-align: center;
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
+
+.form-group {
+	width: 50%;
+}
+
+.form-group label {
+	text-align: left;
+}
+
+.table th {
+    text-align: left;
+    background: #3f51b5;
+    color: white;
+    outline: none;
+}
+
+.cover {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+	background-color: #3f51b5;
+    border-color: #3f51b5;
+}
+
+md-select .md-select-value {
+    border-bottom-color: rgb(222, 54, 65);
+}
+
+.create-overflow {
+height: 70vh;
+overflow-y:scroll;	
+}
+.table {
+    position: relative;
+}
+
+.table td {
+  outline: none;  
+}
+
+
+.table td i {
+color: #de3641;
+}
+
+.intro {
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 20px;
+    color: #3f51b5;
+}
+
+
+@media screen and (max-width: 480px) {
+.count-users {
+    position: absolute;
+    top: 0%;
+    right: 20px;
+}
+.count-users h2 {
+line-height: 60px;
+}
+
+.sidebar ul {
+	display: flex;
+}
+
+.sidebar ul a {
+width: 100%;
+}
+
+.sidebar h1:nth-child(4) {
+display: none;	
+}
+
+.form-group {
+float: left;
+}
+
+.sidebar {
+	height: auto;
+}
+}
+
+                            
